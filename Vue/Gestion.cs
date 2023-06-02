@@ -164,7 +164,22 @@ namespace Connecte.Vue
             form13.ShowDialog();
         }
 
-      
-        
+        private void bRefresh_Click(object sender, EventArgs e)
+        {
+            seances = monManager.chargementSeanceBD();
+            profs = monManager.chargementProfBD();
+
+            foreach (Seance s in seances)
+            {
+                foreach (Prof p in profs)
+                {
+                    if (s.IdProf == p.Id)
+                    {
+                        s.NomProf = p.Nom;
+                    }
+                }
+            }
+            afficheSeance();
+        }
     }
 }

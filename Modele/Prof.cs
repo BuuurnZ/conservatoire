@@ -49,7 +49,7 @@ namespace Connecte
 
         public string Description
         {
-            get => "Id : " + this.id + " Nom :" + this.nom + " Prenom : " + this.prenom + " NumTel : " + this.numTel + " Mail : " + this.mail;
+            get => "Id : " + this.id + " Nom :" + this.nom + " Prenom : " + this.prenom + " NumTel : " + this.numTel + " Mail : " + this.mail + " Instrument : " + this.instrument;
         }
 
         public string DescNom
